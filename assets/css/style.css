@@ -1,18 +1,40 @@
 /**
- * Responsable Grid System
+
+	                                                       .-'''-.                                                                                                   
+	                                                      '   _    \                                                                                                 
+	                   __.....__     /|                 /   /` '.   \              __.....__                .              __.....__                                 
+	       _     _ .-''         '.   ||                .   |     \  '  .--./)  .-''         '.            .'|          .-''         '.                               
+	 /\    \\   ///     .-''"'-.  `. ||             .| |   '      |  '/.''\\  /     .-''"'-.  `.      .| <  |         /     .-''"'-.  `. .-,.--.                     
+	 `\\  //\\ ///     /________\   \||  __       .' |_\    \     / /| |  | |/     /________\   \   .' |_ | |        /     /________\   \|  .-. |                    
+	   \`//  \'/ |                  |||/'__ '.  .'     |`.   ` ..' /  \`-' / |                  | .'     || | .'''-. |                  || |  | |                    
+	    \|   |/  \    .-------------'|:/`  '. ''--.  .-'   '-...-'`   /("'`  \    .-------------''--.  .-'| |/.'''. \\    .-------------'| |  | |                    
+	     '        \    '-.____...---.||     | |   |  |                \ '---. \    '-.____...---.   |  |  |  /    | | \    '-.____...---.| |  '-                     
+	               `.             .' ||\    / '   |  |                 /'""'.\ `.             .'    |  |  | |     | |  `.             .' | |                         
+	                 `''-...... -'   |/\'..' /    |  '.'              ||     ||  `''-...... -'      |  '.'| |     | |    `''-...... -'   | |                         
+	       _..._                     '  `'-'`     |   /               \'. __//                      |   / | '.    | '.            .-'''-.|_|                         
+	    .-'_..._''.                               `'-'                 `'---'                       `'-'  '---'   '---'          '   _    \                          
+	  .' .'      '.\                                                          __  __   ___         __.....__                   /   /` '.   \              .          
+	 / .'                                              _.._                  |  |/  `.'   `.   .-''         '.         _     _.   |     \  '            .'|          
+	. '                                              .' .._|.-,.--.          |   .-.  .-.   ' /     .-''"'-.  `. /\    \\   //|   '      |  '.-,.--.  .'  |          
+	| |                                              | '    |  .-. |    __   |  |  |  |  |  |/     /________\   \`\\  //\\ // \    \     / / |  .-. |<    |          
+	| |                   _         _              __| |__  | |  | | .:--.'. |  |  |  |  |  ||                  |  \`//  \'/   `.   ` ..' /  | |  | | |   | ____     
+	. '                 .' |      .' |            |__   __| | |  | |/ |   \ ||  |  |  |  |  |\    .-------------'   \|   |/       '-...-'`   | |  | | |   | \ .'     
+	 \ '.          .   .   | /   .   | /             | |    | |  '- `" __ | ||  |  |  |  |  | \    '-.____...---.    '                       | |  '-  |   |/  .      
+	  '. `._____.-'/ .'.'| |// .'.'| |//             | |    | |      .'.''| ||__|  |__|  |__|  `.             .'                             | |      |    /\  \     
+	    `-.______ /.'.'.-'  /.'.'.-'  /              | |    | |     / /   | |_                   `''-...... -'                               | |      |   |  \  \    
+	             ` .'   \_.' .'   \_.'               | |    |_|     \ \._,\ '/                                                               |_|      '    \  \  \   
+	                                                 |_|             `--'  `"                                                                        '------'  '---' 
+
+ * ====================================================================================================================================================================
+ * 
+ * A customization of the Responsable Grid System
  *
- * Setting up a responsive grid based on Semantic GS
- *
- * @author Abban Dunne http://abandon.ie
- * @author James Wilson http://jimmynotjim.com
+ * @author Abban Dunne http://webtogether.ie
  * @version 0.9
+ * 
  */
+/* Import normalize, baseline and grid
 /* ========================================================== */
-/* = Import normalize, baseline and grid                    = */
-/* ========================================================== */
-/**
- * Declare your constants here. All constant names should be UPPERCASE
- */
 /*! normalize.css v2.0.1 | MIT License | git.io/normalize */
 /* ==========================================================================
    HTML5 display definitions
@@ -403,7 +425,7 @@ table {
   color: inherit;
 }
 html {
-  font: normal 100%/1.65 serif;
+  font: normal 112.5%%/1.65 "Helvetica Neue", Arial, Helvetica, Sans-Serif;
 }
 body {
   -webkit-hyphens: auto;
@@ -416,93 +438,93 @@ body {
 }
 .tera {
   font-size: 117px;
-  font-size: 7.3125rem;
-  margin-bottom: 0.22564102564102562rem;
+  font-size: 6.5%rem;
+  margin-bottom: 0.25384615384615383%rem;
 }
 .giga {
   font-size: 90px;
-  font-size: 5.625rem;
-  margin-bottom: 0.29333333333333333rem;
+  font-size: 5%rem;
+  margin-bottom: 0.33%rem;
 }
 .mega {
   font-size: 72px;
-  font-size: 4.5rem;
-  margin-bottom: 0.36666666666666664rem;
+  font-size: 4%rem;
+  margin-bottom: 0.4125%rem;
 }
 .alpha {
   font-size: 60px;
-  font-size: 3.75rem;
-  margin-bottom: 0.44rem;
+  font-size: 3.3333333333333335%rem;
+  margin-bottom: 0.495%rem;
 }
 .beta {
   font-size: 48px;
-  font-size: 3rem;
-  margin-bottom: 0.5499999999999999rem;
+  font-size: 2.6666666666666665%rem;
+  margin-bottom: 0.61875%rem;
 }
 .gamma {
   font-size: 36px;
-  font-size: 2.25rem;
-  margin-bottom: 0.7333333333333333rem;
+  font-size: 2%rem;
+  margin-bottom: 0.825%rem;
 }
 .delta {
   font-size: 24px;
-  font-size: 1.5rem;
-  margin-bottom: 1.0999999999999999rem;
+  font-size: 1.3333333333333333%rem;
+  margin-bottom: 1.2375%rem;
 }
 .epsilon {
   font-size: 21px;
-  font-size: 1.3125rem;
-  margin-bottom: 1.2571428571428571rem;
+  font-size: 1.1666666666666667%rem;
+  margin-bottom: 1.4142857142857141%rem;
 }
 .zeta {
   font-size: 18px;
-  font-size: 1.125rem;
-  margin-bottom: 1.4666666666666666rem;
+  font-size: 1%rem;
+  margin-bottom: 1.65%rem;
 }
 h1 {
   font-size: 60px;
-  font-size: 3.75rem;
-  margin-bottom: 0.44rem;
+  font-size: 3.3333333333333335%rem;
+  margin-bottom: 0.495%rem;
   text-rendering: optimizeLegibility;
   line-height: 1;
   margin-top: 0;
 }
 h2 {
   font-size: 48px;
-  font-size: 3rem;
-  margin-bottom: 0.5499999999999999rem;
+  font-size: 2.6666666666666665%rem;
+  margin-bottom: 0.61875%rem;
   text-rendering: optimizeLegibility;
   line-height: 1;
   margin-top: 0;
 }
 h3 {
   font-size: 36px;
-  font-size: 2.25rem;
-  margin-bottom: 0.7333333333333333rem;
+  font-size: 2%rem;
+  margin-bottom: 0.825%rem;
   text-rendering: optimizeLegibility;
   line-height: 1;
   margin-top: 0;
 }
 h4 {
   font-size: 24px;
-  font-size: 1.5rem;
-  margin-bottom: 1.0999999999999999rem;
+  font-size: 1.3333333333333333%rem;
+  margin-bottom: 1.2375%rem;
   text-rendering: optimizeLegibility;
   line-height: 1;
   margin-top: 0;
 }
 h5 {
   font-size: 21px;
-  font-size: 1.3125rem;
-  margin-bottom: 1.2571428571428571rem;
+  font-size: 1.1666666666666667%rem;
+  margin-bottom: 1.4142857142857141%rem;
   text-rendering: optimizeLegibility;
   line-height: 1;
   margin-top: 0;
 }
 h6 {
   font-size: 18px;
-  font-size: 1.125rem;
-  margin-bottom: 1.4666666666666666rem;
+  font-size: 1%rem;
+  margin-bottom: 1.65%rem;
   text-rendering: optimizeLegibility;
   line-height: 1;
   margin-top: 0;
@@ -755,20 +777,624 @@ h6 {
 /* Our column container */
 /* Push adds left padding */
 /* Pull adds right padding */
+/* GRID OPTIONS
+ * Add customizations for the grid here
 /* ========================================================== */
-/* = Site Variables                                         = */
+/* TYPEPLATE OPTIONS
+ * Add customizations for typeplate here
 /* ========================================================== */
-/* Grid options
-/* ========================================================== */
-/* Type options
-/* ========================================================== */
-/* Font variables */
-/* Link colors */
+/* Links */
+/* Submit & Button Colours */
 /* Select colors */
-/* Default Colors */
+/* COLOUR OPTIONS
+ * Add customizations for typeplate here
 /* ========================================================== */
-/* = Your custom styles go here                             = */
+/**
+ * Mixins
+ *
+ * Various mixins to modularize vendors and css3. Feel free to add your own.
+ * 
+ */
+/* Layout Helpers
 /* ========================================================== */
+/* Hacks
+/* ========================================================== */
+/* Vendor Prefix Removal Modules
+/* ========================================================== */
+/**
+ * Type Overrides
+ *
+ * Edit this file to apply style overrides for your site
+ *
+ *
+ * 
+ */
+/* Box sizing to make life easier
+/* ========================================================== */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/* Add type aliasing to everything
+/* ========================================================== */
+body {
+  text-shadow: 0 -1px 1px rgba(255, 255, 255, 0.01);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+.clear {
+  clear: both;
+}
+/* Custom selection colours
+/* ========================================================== */
+::selection {
+  background: #78aace;
+  color: #ffffff;
+}
+::-moz-selection {
+  background: #78aace;
+  color: #ffffff;
+}
+img::selection {
+  background: transparent;
+}
+img::-moz-selection {
+  background: transparent;
+}
+body {
+  -webkit-tap-highlight-color: #78aace;
+}
+/* Links
+/* ========================================================== */
+a {
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+  color: #6bac60;
+  text-decoration: none;
+}
+a:hover,
+a:focus {
+  color: #78aace;
+}
+/* Responsive Images
+/* ========================================================== */
+figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+/* Lists
+/* ========================================================== */
+ul,
+ol,
+dl {
+  margin: 0;
+  margin-bottom: 1.5em;
+}
+nav ul {
+  list-style-type: none;
+  margin-right: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+ul.items {
+  list-style-type: none;
+  margin-right: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  border-top: 1px solid #eee;
+}
+ul.items li {
+  border-bottom: 1px solid #eee;
+  padding: 0.5em 0;
+}
+ul.items li article {
+  margin-bottom: 0 !important;
+}
+ul.items li article h2 {
+  margin-bottom: 0;
+}
+/* Forms
+/* ========================================================== */
+/**
+ * Form Markup : This is the markup style for a form
+ *
+<form>
+    <ul>
+        <li>
+            <label for="element">Label</label>
+            <div class="field">
+                <input type="text" name="element" id="element" placeholder="Placeholder text..">
+                <?php if($error): ?><div class="error">Error message</div><?php endif; ?>
+            </div>
+        </li>
+        <li class="form_buttons">
+            <input type="submit" value="submit">
+        </li>
+    </ul>
+</form>
+ */
+/**
+ * Select Markup : This is the markup style for a select
+ *
+<div class="select">
+    
+</div>
+ */
+form {
+  margin-bottom: 1.5em;
+}
+form ul {
+  list-style-type: none;
+  list-style-image: none;
+  margin: 0;
+  padding: 0;
+}
+form ul li {
+  *zoom: 1;
+  clear: both;
+  margin-bottom: 1.5em;
+}
+form ul li:before,
+form ul li:after {
+  content: "";
+  display: table;
+}
+form ul li:after {
+  clear: both;
+}
+form ul li div.field {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  display: inline;
+  float: left;
+  width: 58.333333333333336%;
+  padding: 0 12px;
+  *width: 54.427083333333336%;
+  *padding: 0 11.9609375px;
+}
+form ul li div.error {
+  font-size: small;
+  color: red;
+  text-align: right;
+}
+form ul li:before {
+  display: none;
+}
+form ul li.form_buttons {
+  margin-left: 17.5%;
+}
+label {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  display: inline;
+  float: left;
+  width: 16.666666666666664%;
+  padding: 0 12px;
+  *width: 12.760416666666666%;
+  *padding: 0 11.9609375px;
+  outline: none;
+  font-weight: normal;
+  white-space: nowrap;
+  padding-top: 5px;
+}
+label > span.required {
+  color: #c0392b;
+}
+label.inline {
+  display: inline;
+}
+label.checkbox {
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin-bottom: 5px;
+  color: #666666;
+}
+label.checkbox input {
+  margin-right: 6px;
+}
+input:focus,
+textarea:focus,
+select:focus {
+  outline: 0px;
+  -webkit-box-shadow: 0px 0px 5px #ffffcc;
+  -moz-box-shadow: 0px 0px 5px #ffffcc;
+  -ms-box-shadow: 0px 0px 5px #ffffcc;
+  -o-box-shadow: 0px 0px 5px #ffffcc;
+  box-shadow: 0px 0px 5px #ffffcc;
+}
+input[type="text"],
+input[type="url"],
+input[type="email"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="tel"],
+textarea {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  border-radius: 5px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  text-shadow: 0 -1px 1px rgba(255, 255, 255, 0.01);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  display: block;
+  width: 100%;
+  margin: 0 0 0.75em;
+  padding: 0.4em;
+  border: 1px solid #e8e8e8;
+  border-top: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+  background: #ffffff;
+  line-height: 1.5em;
+  font-family: "Helvetica Neue", Arial, Helvetica, Sans-Serif;
+}
+select {
+  width: 100%;
+  height: 2.1em;
+  margin-bottom: 0.9em;
+  border: 1px solid #e8e8e8;
+  font-family: "Helvetica Neue", Arial, Helvetica, Sans-Serif;
+}
+div.select {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  border-radius: 5px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  height: 35px;
+  line-height: 33px;
+  overflow: hidden;
+  border: 1px solid #e8e8e8;
+  border-top: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+  margin: 0 0 20px 3px;
+  padding: 0 0 0 5px;
+  position: relative;
+}
+div.select:after {
+  background: #fefefe;
+  background: -moz-linear-gradient(top, #fefefe 0%, #dddddd 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fefefe), color-stop(100%, #dddddd));
+  background: -webkit-linear-gradient(top, #fefefe 0%, #dddddd 100%);
+  background: -o-linear-gradient(top, #fefefe 0%, #dddddd 100%);
+  background: -ms-linear-gradient(top, #fefefe 0%, #dddddd 100%);
+  background: linear-gradient(top, #fefefe 0%, #dddddd 100%);
+  content: '▼';
+  font-size: 0.8em;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  padding: 3px 7px 0;
+  border-left: 1px solid #ddd;
+}
+div.select:hover:after {
+  color: #6bac60;
+}
+div.select > select {
+  position: relative;
+  z-index: 99;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: window;
+  background: none;
+  width: 100%;
+  padding: 1px 20px 0 3px;
+  border: 0;
+  box-shadow: none;
+}
+div.select > select:focus,
+div.select > select:active {
+  outline: none !important;
+}
+div.select > select:hover {
+  cursor: pointer;
+}
+input[type="range"],
+input[type="color"] {
+  vertical-align: middle;
+  height: 1.5em;
+  width: 100%;
+  font-family: "Helvetica Neue", Arial, Helvetica, Sans-Serif;
+}
+input[type="range"] {
+  height: 1.4em;
+}
+input[type="color"] {
+  width: 1.5em;
+  font-family: "Helvetica Neue", Arial, Helvetica, Sans-Serif;
+}
+input[type="time"] {
+  margin: 0 0 0.55em;
+}
+progress,
+meter {
+  display: block;
+  width: 100%;
+  height: 1.5em;
+}
+input[type="file"] {
+  border: 1px solid #ddd;
+  padding: 5px;
+  font-size: 0.8em;
+}
+input[type="submit"],
+input[type="button"] {
+  text-shadow: 0 -1px 1px rgba(255, 255, 255, 0.01);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+  font-family: "Helvetica Neue", Arial, Helvetica, Sans-Serif;
+  background: #6bac60;
+  color: #ffffff;
+  padding: 5px 24px;
+  border: 0;
+}
+input[type="submit"]:hover,
+input[type="button"]:hover,
+input[type="submit"]:focus,
+input[type="button"]:focus {
+  cursor: pointer;
+  background: #78aace;
+}
+::-webkit-file-upload-button {
+  text-shadow: 0 -1px 1px rgba(255, 255, 255, 0.01);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+  font-family: "Helvetica Neue", Arial, Helvetica, Sans-Serif;
+  background: #6bac60;
+  color: #ffffff;
+  padding: 5px 24px;
+  border: 0;
+}
+::-webkit-file-upload-button:hover,
+::-webkit-file-upload-button:focus {
+  cursor: pointer;
+  background: #78aace;
+}
+::-ms-browse {
+  text-shadow: 0 -1px 1px rgba(255, 255, 255, 0.01);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+  font-family: "Helvetica Neue", Arial, Helvetica, Sans-Serif;
+  background: #6bac60;
+  color: #ffffff;
+  padding: 5px 24px;
+  border: 0;
+}
+::-ms-browse:hover,
+::-ms-browse:focus {
+  cursor: pointer;
+  background: #78aace;
+}
+/* Tables
+/* ========================================================== */
+table {
+  margin-bottom: 1.4em;
+  width: 100%;
+  border: 1px solid #cccccc;
+  border-collapse: separate;
+}
+table thead th,
+table th {
+  text-align: left;
+}
+table th,
+table td,
+table caption {
+  padding: 0 10px;
+}
+table th span.icon,
+table td span.icon,
+table caption span.icon {
+  line-height: 1.7em;
+}
+table td p {
+  margin-bottom: 0;
+}
+table tr.alt td,
+table tr:nth-child(even) td {
+  background: #f9f9f9;
+}
+table tfoot {
+  font-style: italic;
+}
+table caption {
+  background: #999;
+}
+/* Misc
+/* ========================================================== */
+hr {
+  background: #dddddd;
+  color: #dddddd;
+  clear: both;
+  float: none;
+  width: 100%;
+  height: 1px;
+  margin: 0 0 1.4em;
+  border: none;
+}
+.align_left {
+  float: left;
+  margin-right: 1.5em;
+  margin-bottom: 1.5em;
+}
+.align_right {
+  float: right;
+  margin-left: 1.5em;
+  margin-bottom: 1.5em;
+}
+/* Your custom styles go here
+/* ========================================================== */
+body {
+  background: #efefef;
+}
+header#prelude,
+footer#conclusion {
+  width: 100%;
+  background: #efefef;
+  padding: 1.5em 0;
+  line-height: 60px;
+}
+header#prelude > div {
+  *zoom: 1;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  display: block;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 0;
+}
+header#prelude > div:before,
+header#prelude > div:after {
+  content: "";
+  display: table;
+}
+header#prelude > div:after {
+  clear: both;
+}
+header#prelude > div > figure {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  display: inline;
+  float: left;
+  width: 25%;
+  padding: 0 12px;
+  *width: 21.09375%;
+  *padding: 0 11.9609375px;
+}
+header#prelude > div > nav {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  display: inline;
+  float: left;
+  width: 75%;
+  padding: 0 12px;
+  *width: 71.09375%;
+  *padding: 0 11.9609375px;
+}
+header#prelude > div > nav ul {
+  float: right;
+}
+header#prelude > div > nav ul li {
+  display: inline-block;
+  *display: inline;
+}
+header#prelude > div > nav ul li a {
+  display: inline-block;
+  *display: inline;
+  padding: 0 1.5em;
+}
+#content {
+  width: 100%;
+  background: #ffffff;
+}
+#content > div {
+  *zoom: 1;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  display: block;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 0;
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
+}
+#content > div:before,
+#content > div:after {
+  content: "";
+  display: table;
+}
+#content > div:after {
+  clear: both;
+}
+#content > div > section {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  display: inline;
+  float: left;
+  width: 75%;
+  padding: 0 12px;
+  *width: 71.09375%;
+  *padding: 0 11.9609375px;
+}
+#content > div > aside {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  display: inline;
+  float: left;
+  width: 25%;
+  padding: 0 12px;
+  *width: 21.09375%;
+  *padding: 0 11.9609375px;
+  background: #efefef;
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
+}
+footer#conclusion > div {
+  *zoom: 1;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  display: block;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 0;
+}
+footer#conclusion > div:before,
+footer#conclusion > div:after {
+  content: "";
+  display: table;
+}
+footer#conclusion > div:after {
+  clear: both;
+}
+footer#conclusion > div > div {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  display: inline;
+  float: left;
+  width: 100%;
+  padding: 0 12px;
+  *width: 96.09375%;
+  *padding: 0 11.9609375px;
+}
 /**
  * NOTE
  * Don't add breakpoints aimed at device pixel widths,

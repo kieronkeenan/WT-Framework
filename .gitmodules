@@ -1,0 +1,3 @@
+[submodule "WT-Framework.wiki"]
+	path = WT-Framework.wiki
+	url = git@github.com:webtogether/WT-Framework.wiki

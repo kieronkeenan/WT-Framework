@@ -1,40 +1,46 @@
+/* GRID OPTIONS
+ * Add customizations for the grid here
 /* ========================================================== */
-/* = Site Variables                                         = */
-/* ========================================================== */
-
-/* Grid options
-/* ========================================================== */
-
-@gutter_width: 40px; // Your gutter width
+@gutter_width: 24px; // Your gutter width
 @columns: 12; // The amount of columns you want
-@max_width: 1008px; // Set a maximum width of the site
+@max_width: 1280px; // Set a maximum width of the site
 
 // Half the gutter for borders, margin, padding etc
 @gutter: @gutter_width*0.5;
 
 
-/* Type options
-/* ========================================================== */
 
-/* Font variables */
+/* TYPEPLATE OPTIONS
+ * Add customizations for typeplate here
+/* ========================================================== */
 @body_color: #333;
 @heading_color: #111;
 
-@body_family: "Open Sans", "Helvetica Neue", Arial, Helvetica, Sans-Serif;
-@heading_family: "Open Sans Condensed", "Helvetica Neue", Arial, Helvetica, Sans-Serif;
+@body_family: "Helvetica Neue", Arial, Helvetica, Sans-Serif;
+@body_family_sans: "Helvetica Neue", Arial, Helvetica, Sans-Serif;
+@heading_family: "Helvetica Neue", Arial, Helvetica, Sans-Serif;
 
-
-/* Link colors */
+/* Links */
 @link: #6bac60;
 @link_hover: #78aace;
+@transition_speed: 0.2s;
+
+/* Submit & Button Colours */
+@button: @link;
+@button_hover: @link_hover;
 
 /* Select colors */
 @select: #78aace;
 @select_color: #fff;
 
-/* Default Colors */
+
+
+/* COLOUR OPTIONS
+ * Add customizations for typeplate here
+/* ========================================================== */
+@error: #c0392b;
+
+@white:#fff;
 @grey_light: #ddd;
 @grey_regular: #ccc;
 @grey_dark: #666;
-
-@green: #6bac60;

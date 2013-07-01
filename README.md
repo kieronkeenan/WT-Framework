@@ -1,4 +1,4 @@
 Starter
 =======
 
-Webtogether's Starter HTML Template.
+Webtogether's Starter HTML Framework.

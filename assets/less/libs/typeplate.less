@@ -31,11 +31,12 @@
 
 @weight: normal;
 @line-height: 1.65;
-@font-size: 100; // percentage value (16 * 112.5% = 18px)
+@font-size: 112.5%; // percentage value (16 * 112.5% = 18px)
 @font-base: 16 * (@font-size/100); // converts our percentage to a pixel value
 @measure: @font-base * @line-height;
-@font-family: serif;
-@font-family-sans: sans-serif;
+@font-family: @body_family;
+@font-family-sans: @body_family_sans;
+@font-family-headings: @heading_family;
 
 //the serif boolean var can be redeclared from another stylesheet. However
 //the var must be placed after your @import "typeplate.less";

@@ -1,38 +1,127 @@
 /**
- * Responsable Grid System
+
+	                                                       .-'''-.                                                                                                   
+	                                                      '   _    \                                                                                                 
+	                   __.....__     /|                 /   /` '.   \              __.....__                .              __.....__                                 
+	       _     _ .-''         '.   ||                .   |     \  '  .--./)  .-''         '.            .'|          .-''         '.                               
+	 /\    \\   ///     .-''"'-.  `. ||             .| |   '      |  '/.''\\  /     .-''"'-.  `.      .| <  |         /     .-''"'-.  `. .-,.--.                     
+	 `\\  //\\ ///     /________\   \||  __       .' |_\    \     / /| |  | |/     /________\   \   .' |_ | |        /     /________\   \|  .-. |                    
+	   \`//  \'/ |                  |||/'__ '.  .'     |`.   ` ..' /  \`-' / |                  | .'     || | .'''-. |                  || |  | |                    
+	    \|   |/  \    .-------------'|:/`  '. ''--.  .-'   '-...-'`   /("'`  \    .-------------''--.  .-'| |/.'''. \\    .-------------'| |  | |                    
+	     '        \    '-.____...---.||     | |   |  |                \ '---. \    '-.____...---.   |  |  |  /    | | \    '-.____...---.| |  '-                     
+	               `.             .' ||\    / '   |  |                 /'""'.\ `.             .'    |  |  | |     | |  `.             .' | |                         
+	                 `''-...... -'   |/\'..' /    |  '.'              ||     ||  `''-...... -'      |  '.'| |     | |    `''-...... -'   | |                         
+	       _..._                     '  `'-'`     |   /               \'. __//                      |   / | '.    | '.            .-'''-.|_|                         
+	    .-'_..._''.                               `'-'                 `'---'                       `'-'  '---'   '---'          '   _    \                          
+	  .' .'      '.\                                                          __  __   ___         __.....__                   /   /` '.   \              .          
+	 / .'                                              _.._                  |  |/  `.'   `.   .-''         '.         _     _.   |     \  '            .'|          
+	. '                                              .' .._|.-,.--.          |   .-.  .-.   ' /     .-''"'-.  `. /\    \\   //|   '      |  '.-,.--.  .'  |          
+	| |                                              | '    |  .-. |    __   |  |  |  |  |  |/     /________\   \`\\  //\\ // \    \     / / |  .-. |<    |          
+	| |                   _         _              __| |__  | |  | | .:--.'. |  |  |  |  |  ||                  |  \`//  \'/   `.   ` ..' /  | |  | | |   | ____     
+	. '                 .' |      .' |            |__   __| | |  | |/ |   \ ||  |  |  |  |  |\    .-------------'   \|   |/       '-...-'`   | |  | | |   | \ .'     
+	 \ '.          .   .   | /   .   | /             | |    | |  '- `" __ | ||  |  |  |  |  | \    '-.____...---.    '                       | |  '-  |   |/  .      
+	  '. `._____.-'/ .'.'| |// .'.'| |//             | |    | |      .'.''| ||__|  |__|  |__|  `.             .'                             | |      |    /\  \     
+	    `-.______ /.'.'.-'  /.'.'.-'  /              | |    | |     / /   | |_                   `''-...... -'                               | |      |   |  \  \    
+	             ` .'   \_.' .'   \_.'               | |    |_|     \ \._,\ '/                                                               |_|      '    \  \  \   
+	                                                 |_|             `--'  `"                                                                        '------'  '---' 
+
+ * ====================================================================================================================================================================
+ * 
+ * A customization of the Responsable Grid System
  *
- * Setting up a responsive grid based on Semantic GS
- *
- * @author Abban Dunne http://abandon.ie
- * @author James Wilson http://jimmynotjim.com
+ * @author Abban Dunne http://webtogether.ie
  * @version 0.9
+ * 
  */
 
 
+/* Import normalize, baseline and grid
 /* ========================================================== */
-/* = Import normalize, baseline and grid                    = */
-/* ========================================================== */
-
-@import "constants.less";
 @import "libs/normalize.less";
 @import "libs/typeplate.less";
 @import "libs/grid.less";
 @import "settings.less";
+@import "mixins.less";
+@import "type.overrides.less";
 
-/* ========================================================== */
-/* = Your custom styles go here                             = */
-/* ========================================================== */
 
+
+/* Your custom styles go here
+/* ========================================================== */
 body{
-	
+	background:#efefef;
 }
 
-header#worlds_birth{
-	
+header#prelude,
+footer#conclusion
+{
+	width: 100%;
+	background:#efefef;
+	padding: 1.5em 0;
+	line-height: 60px;
 }
 
-#content{
-	
+header#prelude
+{
+	>div
+	{
+		.row();
+		>figure
+		{
+			.column(3);
+		}
+		>nav
+		{
+			.column(9);
+			ul
+			{
+				float:right;
+				li
+				{
+					.inline-block();
+					a
+					{
+						.inline-block();
+						padding: 0 1.5em;
+					}
+				}
+			}
+		}
+	}
+}
+
+#content
+{
+	width: 100%;
+	background: @white;
+	>div{
+		.row();
+		padding-top: 1.5em;
+		padding-bottom: 1.5em;
+		>section
+		{
+			.column(9);
+		}
+		>aside
+		{
+			.column(3);
+			background:#efefef;
+			padding-top: 1.5em;
+			padding-bottom: 1.5em;
+		}
+	}
+}
+
+footer#conclusion
+{
+	>div
+	{
+		.row();
+		>div
+		{
+			.column(12);
+		}
+	}
 }
 
 
@@ -41,6 +130,7 @@ header#worlds_birth{
  * Don't add breakpoints aimed at device pixel widths,
  * add them where they suit best for your design. 
  */
-@media screen and (max-width: 750px){
+@media screen and (max-width: 750px)
+{
 	
 }

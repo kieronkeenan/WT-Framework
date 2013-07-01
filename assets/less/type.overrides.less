@@ -1,0 +1,427 @@
+/**
+ * Type Overrides
+ *
+ * Edit this file to apply style overrides for your site
+ *
+ *
+ * 
+ */
+
+
+/* Box sizing to make life easier
+/* ========================================================== */
+*{ 
+   -webkit-box-sizing: border-box; 
+   -moz-box-sizing: border-box; 
+   box-sizing: border-box;
+}
+
+
+.transition()
+{
+    // Optional transition
+    -webkit-transition:all @transition_speed linear;
+    -moz-transition:all @transition_speed linear;
+    -o-transition:all @transition_speed linear;
+    transition:all @transition_speed linear;
+}
+
+
+
+/* Add type aliasing to everything
+/* ========================================================== */
+.font-smoothing()
+{
+	text-shadow: 0 -1px 1px rgba(255, 255, 255, 0.01);
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+}
+body
+{
+    .font-smoothing();
+}
+
+.clear
+{
+    clear:both;
+}
+
+
+
+/* Custom selection colours
+/* ========================================================== */
+::selection
+{
+	background: @select;
+	color: @select_color;
+}
+::-moz-selection
+{
+	background: @select;
+	color: @select_color;
+}
+img::selection{ background: transparent; }
+img::-moz-selection{ background: transparent; }
+body{ -webkit-tap-highlight-color: @select; }
+
+
+
+/* Links
+/* ========================================================== */
+a{
+    .transition();
+	color:@link;
+    text-decoration: none;
+	&:hover, &:focus
+    {
+	    color: @link_hover;
+	}
+}
+
+/* Responsive Images
+/* ========================================================== */
+figure img
+{
+    width: 100%;
+    height: auto;
+    display:block;
+}
+
+
+
+/* Lists
+/* ========================================================== */
+ul,ol,dl
+{
+    margin:0;
+    margin-bottom: 1.5em;
+}
+
+// Apply custom style to list inside nav
+nav ul{
+    .nav-menu();
+}
+
+ul.items
+{
+    .nav-menu();
+    border-top: 1px solid #eee;
+    li
+    {
+        border-bottom: 1px solid #eee;  
+        padding: 0.5em 0;
+        article
+        {
+            margin-bottom:0 !important;
+            h2{ margin-bottom:0; }
+        }
+    }
+}
+
+
+
+/* Forms
+/* ========================================================== */
+
+/**
+ * Form Markup : This is the markup style for a form
+ *
+<form>
+    <ul>
+        <li>
+            <label for="element">Label</label>
+            <div class="field">
+                <input type="text" name="element" id="element" placeholder="Placeholder text..">
+                <?php if($error): ?><div class="error">Error message</div><?php endif; ?>
+            </div>
+        </li>
+        <li class="form_buttons">
+            <input type="submit" value="submit">
+        </li>
+    </ul>
+</form>
+ */
+
+/**
+ * Select Markup : This is the markup style for a select
+ *
+<div class="select">
+    
+</div>
+ */
+
+form
+{
+    margin-bottom:1.5em;
+    ul
+    {
+        list-style-type:none;
+        list-style-image:none;
+        margin:0;
+        padding:0;
+        li
+        {
+            .clearfix();
+            clear:both;
+            margin-bottom:1.5em;
+            div.field
+            {
+                .column(7);
+            }
+            div.error
+            {
+            	font-size:small;
+            	color:red;
+            	text-align:right;
+            }
+            &:before{ display:none; }
+        }
+        li.form_buttons
+        {
+            .push(2.1);
+        }
+    }
+}
+
+label
+{
+    .column(2);
+    outline: none;
+    font-weight: normal;
+    white-space: nowrap;
+    padding-top: 5px;
+    >span.required{
+        color:@error;
+    }
+}
+
+label.inline
+{
+    display:inline;
+}
+
+label.checkbox
+{
+    display:block;
+    width: 100%;
+    padding:0;
+    margin-bottom: 5px;
+    color:@grey_dark;
+    input
+    {
+        margin-right:6px;
+    }
+}
+
+input,
+textarea,
+select
+{
+    &:focus
+    {
+        outline: 0px; // Probably should leave outlines?
+        .box-shadow(0px 0px 5px #ffffcc);
+    }
+}
+
+input[type="text"],
+input[type="url"],
+input[type="email"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="tel"],
+textarea
+{
+    .border-radius(5px);
+    .font-smoothing();
+    display:block;
+    width: 100%;
+    margin:0 0 0.75em;
+    padding: 0.4em;
+    border:1px solid #e8e8e8;
+    border-top: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    background: @white;
+    line-height: 1.5em;
+    font-family:@font-family;
+}
+
+select
+{
+    width: 100%;
+    height: 2.1em;
+    margin-bottom: 0.9em;
+    border:1px solid #e8e8e8;
+    font-family:@font-family;
+}
+
+div.select
+{
+    .border-radius(5px);
+    height: 35px;
+    line-height: 33px;
+    overflow: hidden;
+    border:1px solid #e8e8e8;
+    border-top: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    margin: 0 0 20px 3px;
+    padding:0 0 0 5px;
+    position: relative;
+    &:after
+    {   
+        .gradient(#fefefe, #fefefe, #ddd);
+        content:'▼'; // You may need to add an icon font
+        font-size: 0.8em;
+        position: absolute;
+        top:0;
+        right:0;
+        height: 100%;
+        padding: 3px 7px 0;
+        border-left: 1px solid #ddd;
+    }
+    &:hover:after
+    {
+        color:@link;
+    }
+    >select
+    {
+        position: relative;
+        z-index: 99;
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: window;
+        background: none;
+        width: 100%;
+        padding: 1px 20px 0 3px;
+        border: 0;
+        box-shadow: none;
+        &:focus, &:active{outline:none !important;}
+        &:hover{ cursor: pointer; }
+    }
+}
+
+input[type="range"],
+input[type="color"]
+{
+    vertical-align: middle;
+    height: 1.5em;
+    width: 100%;
+    font-family: @font-family;
+}
+
+input[type="range"]
+{
+    height: 1.4em;
+}
+
+input[type="color"]
+{
+    width: 1.5em;
+    font-family:@font-family;
+}
+
+// Time element is a little weird with the extra controls
+input[type="time"]
+{
+	margin: 0 0 0.55em;
+}
+
+progress,
+meter
+{
+    display:block;
+    width: 100%;
+    height: 1.5em;
+}
+
+input[type="file"]
+{
+    border: 1px solid #ddd;
+    padding: 5px;
+    font-size: 0.8em;
+}
+
+.submit_button()
+{
+    .font-smoothing();
+    .transition();
+    font-family: @body_family;
+    background:@button;
+    color:@white;
+    padding: 5px 24px;
+    border:0;
+
+    &:hover, &:focus
+    {
+        cursor: pointer;
+        background: @button_hover;
+    }
+}
+
+// Styling for buttons and file in webkit and IE
+input[type="submit"], input[type="button"]{ .submit_button(); }
+::-webkit-file-upload-button{ .submit_button(); }
+::-ms-browse{ .submit_button(); }
+
+
+
+/* Tables
+/* ========================================================== */
+table
+{
+    margin-bottom: 1.4em;
+    width:100%;
+    border:1px solid @grey_regular;
+    border-collapse: separate;
+    thead th, th
+    {
+        text-align: left; 
+    }
+    th,td,caption
+    {
+        padding: 0 10px;
+        span.icon
+        {
+            line-height: 1.7em;
+        }
+    }
+    td p { margin-bottom: 0; }
+    tr.alt td, tr:nth-child(even) td  { background: #f9f9f9; }
+    tfoot{ font-style: italic; }
+    caption{ background: #999; }
+}
+
+
+
+/* Misc
+/* ========================================================== */
+hr
+{
+    background: @grey_light;
+    color: @grey_light;
+    clear: both;
+    float: none;
+    width: 100%;
+    height: 1px;
+    margin: 0 0 1.4em;
+    border: none;
+}
+.align_left
+{
+    float:left;
+    margin-right: 1.5em;
+    margin-bottom: 1.5em;
+}
+.align_right
+{
+    float:right;
+    margin-left: 1.5em;
+    margin-bottom: 1.5em;
+}
