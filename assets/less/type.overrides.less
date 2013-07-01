@@ -143,11 +143,27 @@ ul.items
  */
 
 /**
- * Select Markup : This is the markup style for a select
+ * Select Markup : This is the markup style for a select in your form
  *
-<div class="select">
-    
-</div>
+<li>
+    <label for="select_element">Select:</label>
+    <div class="field">
+        <div class="select">
+            <select name="select_element">
+                <optgroup label="Option Group 1">
+                    <option value="1">Option 1</option>
+                    <option value="2">Option 2</option>
+                    <option value="3">Option 3</option>
+                </optgroup>
+                <optgroup label="Option Group 2">
+                    <option value="1">Option 1</option>
+                    <option value="2">Option 2</option>
+                    <option value="3">Option 3</option>
+                </optgroup>
+            </select>
+        </div>
+    </div>
+</li>
  */
 
 form
@@ -294,14 +310,17 @@ div.select
     {
         position: relative;
         z-index: 99;
-        appearance: none;
-        -webkit-appearance: none;
-        -moz-appearance: window;
         background: none;
         width: 100%;
         padding: 1px 20px 0 3px;
         border: 0;
         box-shadow: none;
+        
+        // Hide the select
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: window;
+
         &:focus, &:active{outline:none !important;}
         &:hover{ cursor: pointer; }
     }

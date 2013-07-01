@@ -1,4 +1,4 @@
-//@codekit-prepend "libs/modernizr-latest.js", "libs/jquery-1.9.1.js";
+//@codekit-prepend "libs/modernizr-latest.js", "libs/jquery-2.0.2.js", "libs/jquery-cookielaw.js";
 
 /**
  * Add Modernizr test for box sizing
@@ -26,5 +26,8 @@ $(function(){
 
 
 $(function(){
+	$('body').cookielaw({
+		
+	});
 	//$('figure.responsive').picture({ container : $('#content') });
 });

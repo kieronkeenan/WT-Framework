@@ -27,7 +27,7 @@
 
 			<h2 id="paragraph">Paragraph</h2>
 
-			<img class="align_right" src="http://fillmurray.com/260/180" alt="Everyone loves Bill Murray">
+			<img class="align_right" src="http://fillmurray.com/360/240" alt="Everyone loves Bill Murray">
 			<p>Lorem ipsum dolor sit amet, <a href="#" title="test link">test link</a> adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl. Praesent mattis, massa quis luctus fermentum, turpis mi volutpat justo, eu volutpat enim diam eget metus. Maecenas ornare tortor. Donec sed tellus eget sapien fringilla nonummy. Mauris a ante. Suspendisse quam sem, consequat at, commodo vitae, feugiat in, nunc. Morbi imperdiet augue quis tellus.</p>
 
 			<p>Lorem ipsum dolor sit amet, <em>emphasis</em> consectetuer adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl. Praesent mattis, massa quis luctus fermentum, turpis mi volutpat justo, eu volutpat enim diam eget metus. Maecenas ornare tortor. Donec sed tellus eget sapien fringilla nonummy. Mauris a ante. Suspendisse quam sem, consequat at, commodo vitae, feugiat in, nunc. Morbi imperdiet augue quis tellus.</p>
@@ -82,7 +82,7 @@
 						</li>
 
 						<li>
-							<label for="select_element">Text Area:</label>
+							<label for="select_element">Select:</label>
 							<div class="field">
 								<div class="select">
 									<select name="select_element">
@@ -104,18 +104,18 @@
 						<li>
 							<label>Radio Buttons:</label>
 							<div class="field">
-								<label for="radio_1" class="checkbox"><input type="radio" name="radio_button" value="radio_1"> Radio 1</label>
-								<label for="radio_2" class="checkbox"><input type="radio" name="radio_button" value="radio_2"> Radio 2</label>
-								<label for="radio_3" class="checkbox"><input type="radio" name="radio_button" value="radio_3"> Radio 3</label>
+								<label for="radio_1" class="checkbox"><input id="radio_1" type="radio" name="radio_button" value="radio_1"> Radio 1</label>
+								<label for="radio_2" class="checkbox"><input id="radio_2" type="radio" name="radio_button" value="radio_2"> Radio 2</label>
+								<label for="radio_3" class="checkbox"><input id="radio_3" type="radio" name="radio_button" value="radio_3"> Radio 3</label>
 							</div>
 						</li>
 
 						<li>
 							<label>Checkboxes:</label>
 							<div class="field">
-								<label for="check_1" class="checkbox"><input type="checkbox" name="checkbox" value="check_1"> Check 1</label>
-								<label for="check_2" class="checkbox"><input type="checkbox" name="checkbox" value="check_2"> Check 2</label>
-								<label for="check_3" class="checkbox"><input type="checkbox" name="checkbox" value="check_3"> Check 3</label>
+								<label for="check_1" class="checkbox"><input id="check_1" type="checkbox" name="checkbox" value="check_1"> Check 1</label>
+								<label for="check_2" class="checkbox"><input id="check_2" type="checkbox" name="checkbox" value="check_2"> Check 2</label>
+								<label for="check_3" class="checkbox"><input id="check_3" type="checkbox" name="checkbox" value="check_3"> Check 3</label>
 							</div>
 						</li>
 

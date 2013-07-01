@@ -402,11 +402,13 @@ body {
 
 // styles for all headings, in the style of @csswizardry
 .hN () {
+	font-family: @font-family-headings;
 	// voodoo to enable ligatures and kerning
 	text-rendering: optimizeLegibility;
 	// this fixes huge spaces when a heading wraps onto two lines
 	line-height: 1;
 	margin-top: 0;
+	font-weight: @heading_weight;
 }
 
 // for each size in the scale, create a class

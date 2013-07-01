@@ -3,7 +3,7 @@
 /* ========================================================== */
 @gutter_width: 24px; // Your gutter width
 @columns: 12; // The amount of columns you want
-@max_width: 1280px; // Set a maximum width of the site
+@max_width: 1280px; // Set a maximum width of the site. Design for 1000px but breakpoint for larger screens.
 
 // Half the gutter for borders, margin, padding etc
 @gutter: @gutter_width*0.5;
@@ -16,9 +16,11 @@
 @body_color: #333;
 @heading_color: #111;
 
-@body_family: "Helvetica Neue", Arial, Helvetica, Sans-Serif;
+@body_family: 'Borgia', Georgia, "Times New Roman", Times, Serif;
 @body_family_sans: "Helvetica Neue", Arial, Helvetica, Sans-Serif;
-@heading_family: "Helvetica Neue", Arial, Helvetica, Sans-Serif;
+@heading_family: @body_family;
+
+@heading_weight: normal;
 
 /* Links */
 @link: #6bac60;

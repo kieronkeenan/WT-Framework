@@ -35,6 +35,55 @@
  */
 /* Import normalize, baseline and grid
 /* ========================================================== */
+@font-face {
+  font-family: 'Borgia';
+  src: url('../fonts/BorgiaPro-Regular-webfont.eot');
+  src: url('../fonts/BorgiaPro-Regular-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/BorgiaPro-Regular-webfont.woff') format('woff'), url('../fonts/BorgiaPro-Regular-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Borgia';
+  src: url('../fonts/BorgiaPro-Bold-webfont.eot');
+  src: url('../fonts/BorgiaPro-Bold-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/BorgiaPro-Bold-webfont.woff') format('woff'), url('../fonts/BorgiaPro-Bold-webfont.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Borgia';
+  src: url('../fonts/BorgiaPro-Italic-webfont.eot');
+  src: url('../fonts/BorgiaPro-Italic-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/BorgiaPro-Italic-webfont.woff') format('woff'), url('../fonts/BorgiaPro-Italic-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Borgia';
+  src: url('../fonts/BorgiaPro-BoldItalic-webfont.eot');
+  src: url('../fonts/BorgiaPro-BoldItalic-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/BorgiaPro-BoldItalic-webfont.woff') format('woff'), url('../fonts/BorgiaPro-BoldItalic-webfont.ttf') format('truetype');
+  font-weight: bold;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Icons';
+  src: url('../icons/icons.eot');
+  src: url('../icons/icons.eot?#iefix') format('embedded-opentype'), url('../icons/icons.woff') format('woff'), url('../icons/icons.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+/*  Icons  */
+[data-icon] {
+  display: inline-block;
+  *display: inline;
+}
+[data-icon]:before {
+  font-family: 'Icons';
+  content: attr(data-icon);
+  -webkit-font-smoothing: antialiased;
+  text-transform: none;
+  font-size: 1.5em;
+  vertical-align: -8%;
+  font-weight: normal;
+}
 /*! normalize.css v2.0.1 | MIT License | git.io/normalize */
 /* ==========================================================================
    HTML5 display definitions
@@ -425,7 +474,7 @@ table {
   color: inherit;
 }
 html {
-  font: normal 112.5%%/1.65 "Helvetica Neue", Arial, Helvetica, Sans-Serif;
+  font: normal 112.5%%/1.65 'Borgia', Georgia, "Times New Roman", Times, Serif;
 }
 body {
   -webkit-hyphens: auto;
@@ -485,49 +534,61 @@ h1 {
   font-size: 60px;
   font-size: 3.3333333333333335%rem;
   margin-bottom: 0.495%rem;
+  font-family: 'Borgia', Georgia, "Times New Roman", Times, Serif;
   text-rendering: optimizeLegibility;
   line-height: 1;
   margin-top: 0;
+  font-weight: normal;
 }
 h2 {
   font-size: 48px;
   font-size: 2.6666666666666665%rem;
   margin-bottom: 0.61875%rem;
+  font-family: 'Borgia', Georgia, "Times New Roman", Times, Serif;
   text-rendering: optimizeLegibility;
   line-height: 1;
   margin-top: 0;
+  font-weight: normal;
 }
 h3 {
   font-size: 36px;
   font-size: 2%rem;
   margin-bottom: 0.825%rem;
+  font-family: 'Borgia', Georgia, "Times New Roman", Times, Serif;
   text-rendering: optimizeLegibility;
   line-height: 1;
   margin-top: 0;
+  font-weight: normal;
 }
 h4 {
   font-size: 24px;
   font-size: 1.3333333333333333%rem;
   margin-bottom: 1.2375%rem;
+  font-family: 'Borgia', Georgia, "Times New Roman", Times, Serif;
   text-rendering: optimizeLegibility;
   line-height: 1;
   margin-top: 0;
+  font-weight: normal;
 }
 h5 {
   font-size: 21px;
   font-size: 1.1666666666666667%rem;
   margin-bottom: 1.4142857142857141%rem;
+  font-family: 'Borgia', Georgia, "Times New Roman", Times, Serif;
   text-rendering: optimizeLegibility;
   line-height: 1;
   margin-top: 0;
+  font-weight: normal;
 }
 h6 {
   font-size: 18px;
   font-size: 1%rem;
   margin-bottom: 1.65%rem;
+  font-family: 'Borgia', Georgia, "Times New Roman", Times, Serif;
   text-rendering: optimizeLegibility;
   line-height: 1;
   margin-top: 0;
+  font-weight: normal;
 }
 p {
   margin: 0 0 1.5em;
@@ -918,11 +979,27 @@ ul.items li article h2 {
 </form>
  */
 /**
- * Select Markup : This is the markup style for a select
+ * Select Markup : This is the markup style for a select in your form
  *
-<div class="select">
-    
-</div>
+<li>
+    <label for="select_element">Select:</label>
+    <div class="field">
+        <div class="select">
+            <select name="select_element">
+                <optgroup label="Option Group 1">
+                    <option value="1">Option 1</option>
+                    <option value="2">Option 2</option>
+                    <option value="3">Option 3</option>
+                </optgroup>
+                <optgroup label="Option Group 2">
+                    <option value="1">Option 1</option>
+                    <option value="2">Option 2</option>
+                    <option value="3">Option 3</option>
+                </optgroup>
+            </select>
+        </div>
+    </div>
+</li>
  */
 form {
   margin-bottom: 1.5em;
@@ -1042,14 +1119,14 @@ textarea {
   border-left: 1px solid #ccc;
   background: #ffffff;
   line-height: 1.5em;
-  font-family: "Helvetica Neue", Arial, Helvetica, Sans-Serif;
+  font-family: 'Borgia', Georgia, "Times New Roman", Times, Serif;
 }
 select {
   width: 100%;
   height: 2.1em;
   margin-bottom: 0.9em;
   border: 1px solid #e8e8e8;
-  font-family: "Helvetica Neue", Arial, Helvetica, Sans-Serif;
+  font-family: 'Borgia', Georgia, "Times New Roman", Times, Serif;
 }
 div.select {
   -webkit-border-radius: 5px;
@@ -1092,14 +1169,14 @@ div.select:hover:after {
 div.select > select {
   position: relative;
   z-index: 99;
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: window;
   background: none;
   width: 100%;
   padding: 1px 20px 0 3px;
   border: 0;
   box-shadow: none;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: window;
 }
 div.select > select:focus,
 div.select > select:active {
@@ -1113,14 +1190,14 @@ input[type="color"] {
   vertical-align: middle;
   height: 1.5em;
   width: 100%;
-  font-family: "Helvetica Neue", Arial, Helvetica, Sans-Serif;
+  font-family: 'Borgia', Georgia, "Times New Roman", Times, Serif;
 }
 input[type="range"] {
   height: 1.4em;
 }
 input[type="color"] {
   width: 1.5em;
-  font-family: "Helvetica Neue", Arial, Helvetica, Sans-Serif;
+  font-family: 'Borgia', Georgia, "Times New Roman", Times, Serif;
 }
 input[type="time"] {
   margin: 0 0 0.55em;
@@ -1145,7 +1222,7 @@ input[type="button"] {
   -moz-transition: all 0.2s linear;
   -o-transition: all 0.2s linear;
   transition: all 0.2s linear;
-  font-family: "Helvetica Neue", Arial, Helvetica, Sans-Serif;
+  font-family: 'Borgia', Georgia, "Times New Roman", Times, Serif;
   background: #6bac60;
   color: #ffffff;
   padding: 5px 24px;
@@ -1166,7 +1243,7 @@ input[type="button"]:focus {
   -moz-transition: all 0.2s linear;
   -o-transition: all 0.2s linear;
   transition: all 0.2s linear;
-  font-family: "Helvetica Neue", Arial, Helvetica, Sans-Serif;
+  font-family: 'Borgia', Georgia, "Times New Roman", Times, Serif;
   background: #6bac60;
   color: #ffffff;
   padding: 5px 24px;
@@ -1185,7 +1262,7 @@ input[type="button"]:focus {
   -moz-transition: all 0.2s linear;
   -o-transition: all 0.2s linear;
   transition: all 0.2s linear;
-  font-family: "Helvetica Neue", Arial, Helvetica, Sans-Serif;
+  font-family: 'Borgia', Georgia, "Times New Roman", Times, Serif;
   background: #6bac60;
   color: #ffffff;
   padding: 5px 24px;
@@ -1316,6 +1393,7 @@ header#prelude > div > nav ul li a {
   display: inline-block;
   *display: inline;
   padding: 0 1.5em;
+  white-space: nowrap;
 }
 #content {
   width: 100%;

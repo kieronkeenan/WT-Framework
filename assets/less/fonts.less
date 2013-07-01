@@ -1,0 +1,66 @@
+@font-face {
+    font-family: 'Borgia';
+    src: url('../fonts/BorgiaPro-Regular-webfont.eot');
+    src: url('../fonts/BorgiaPro-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/BorgiaPro-Regular-webfont.woff') format('woff'),
+         url('../fonts/BorgiaPro-Regular-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Borgia';
+    src: url('../fonts/BorgiaPro-Bold-webfont.eot');
+    src: url('../fonts/BorgiaPro-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/BorgiaPro-Bold-webfont.woff') format('woff'),
+         url('../fonts/BorgiaPro-Bold-webfont.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Borgia';
+    src: url('../fonts/BorgiaPro-Italic-webfont.eot');
+    src: url('../fonts/BorgiaPro-Italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/BorgiaPro-Italic-webfont.woff') format('woff'),
+         url('../fonts/BorgiaPro-Italic-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Borgia';
+    src: url('../fonts/BorgiaPro-BoldItalic-webfont.eot');
+    src: url('../fonts/BorgiaPro-BoldItalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/BorgiaPro-BoldItalic-webfont.woff') format('woff'),
+         url('../fonts/BorgiaPro-BoldItalic-webfont.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Icons';
+    src: url('../icons/icons.eot');
+    src: url('../icons/icons.eot?#iefix') format('embedded-opentype'),
+         url('../icons/icons.woff') format('woff'),
+         url('../icons/icons.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*  Icons  */
+[data-icon]{
+	.inline-block();
+	&:before{
+		.icon();
+	}
+}
+.icon(){
+	font-family: 'Icons';
+	content: attr(data-icon);
+	-webkit-font-smoothing: antialiased;
+	text-transform:none;
+	font-size: 1.5em;
+	vertical-align: -8%;
+	font-weight: normal;
+}
