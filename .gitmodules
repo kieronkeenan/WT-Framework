@@ -4,3 +4,6 @@
 [submodule "assets/modules/wt-menu"]
 	path = assets/modules/wt-menu
 	url = git@github.com:Abban/wt-menu.git
+[submodule "assets/modules/jquery-cookielaw"]
+	path = assets/modules/jquery-cookielaw
+	url = git@github.com:webtogether/jquery-cookielaw.git
