@@ -45,6 +45,8 @@
 @import "mixins.less";
 @import "type.overrides.less";
 
+@import "../modules/wt-menu/wt-menu.less";
+
 
 
 /* Your custom styles go here
@@ -71,18 +73,17 @@ header#prelude
 		{
 			.column(3);
 		}
-		>nav
+		>div
 		{
 			.column(9);
+			min-height: @nav_height;
 			ul
 			{
 				float:right;
 				li
 				{
-					.inline-block();
 					a
 					{
-						.inline-block();
 						padding: 0 1.5em;
 						white-space: nowrap;
 					}
@@ -132,6 +133,18 @@ footer#conclusion
  * Don't add breakpoints aimed at device pixel widths,
  * add them where they suit best for your design. 
  */
+@media only screen and (max-width: @breakpoint)
+{
+	header#prelude
+	{
+		>div
+		{
+			>figure{ .column(12); }
+			>div{ .column(12,0); }
+		}
+	}
+}
+
 @media screen and (max-width: 750px)
 {
 	

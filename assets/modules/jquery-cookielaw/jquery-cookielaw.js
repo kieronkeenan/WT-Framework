@@ -43,7 +43,15 @@
             {
                 this.addStyles();
                 $(this.element).prepend('<div id="' + this.settings.elementName +'">' + this.settings.message + ' <a id="' + this.settings.buttonName + '" href="#">' + this.settings.buttonText + '</a></div>');
-                $('#' + this.settings.buttonName).on('click', { context : this }, this.hideBanner);
+                
+                if($().jquery >= 2)
+                {
+                    $('#' + this.settings.buttonName).one('click', { context : this }, this.hideBanner);
+                }
+                else
+                {
+                    $('#' + this.settings.buttonName).live('click', { context : this }, this.hideBanner);
+                }
             }
         },
 

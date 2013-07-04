@@ -1,3 +1,6 @@
 [submodule "WT-Framework.wiki"]
 	path = WT-Framework.wiki
 	url = git@github.com:webtogether/WT-Framework.wiki
+[submodule "assets/modules/wt-menu"]
+	path = assets/modules/wt-menu
+	url = git@github.com:Abban/wt-menu.git

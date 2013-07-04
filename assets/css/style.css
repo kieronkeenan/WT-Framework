@@ -1330,6 +1330,195 @@ hr {
   margin-left: 1.5em;
   margin-bottom: 1.5em;
 }
+/**
+ * WT Menu
+ * http://webtogether.ie
+ *
+ * Default styles to be applied to the menu.
+ * 
+ * July 2013
+ * 
+ * @version 1
+ * @author Abban Dunne http://webtogether.ie
+ * @license MIT
+ * 
+ */
+/* Settings
+/* ========================================================== */
+/* Menu Default Stylings
+/* ========================================================== */
+#styx,
+.wt-menu {
+  position: relative;
+  background: none;
+}
+#styx > ul,
+.wt-menu > ul {
+  text-align: left;
+}
+#styx > ul > li,
+.wt-menu > ul > li {
+  float: left;
+  position: relative;
+  *display: inline;
+}
+#styx > ul > li > a,
+.wt-menu > ul > li > a {
+  display: block;
+  background: none;
+  color: #6bac60;
+}
+#styx > ul > li > a:hover,
+.wt-menu > ul > li > a:hover,
+#styx > ul > li > a:focus,
+.wt-menu > ul > li > a:focus {
+  background: none;
+  color: #78aace;
+}
+#styx > ul > li > ul,
+.wt-menu > ul > li > ul {
+  display: none;
+  position: absolute;
+  left: 0;
+  z-index: 9999;
+}
+#styx > ul > li > ul > li a,
+.wt-menu > ul > li > ul > li a {
+  display: block;
+  white-space: nowrap;
+  background: #dcdcdc;
+  color: #6bac60;
+}
+#styx > ul > li > ul > li a:hover,
+.wt-menu > ul > li > ul > li a:hover,
+#styx > ul > li > ul > li a:focus,
+.wt-menu > ul > li > ul > li a:focus {
+  background: #adadad;
+  color: #78aace;
+}
+#styx > ul > li:hover > ul,
+.wt-menu > ul > li:hover > ul,
+#styx > ul > li:focus > ul,
+.wt-menu > ul > li:focus > ul {
+  display: block;
+}
+/* Mobile button
+/* ========================================================== */
+.wt-nav-mobile {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50px;
+  height: 60px;
+  font-size: 3em;
+  cursor: pointer;
+}
+.wt-nav-mobile:before {
+  content: '≣';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  line-height: 60px;
+  text-align: center;
+}
+/* Accordian symbol
+/* ========================================================== */
+.wt-nav-click {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50px;
+  height: 60px;
+  z-index: 999;
+  cursor: pointer;
+}
+.wt-nav-click span {
+  position: relative;
+  display: block;
+  width: 48px;
+  height: 58px;
+}
+.wt-nav-click span:before {
+  content: '▼';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  line-height: 58px;
+  text-align: center;
+}
+.wt-nav-click span.wt-nav-rotate {
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+/* Breakpoint changes
+/* ========================================================== */
+@media only screen and (max-width: 830px) {
+  .wt-nav-mobile {
+    display: block;
+  }
+  #styx,
+  .wt-menu {
+    width: 100%;
+    padding: 60px 0 0;
+  }
+  #styx > ul,
+  .wt-menu > ul {
+    display: none;
+    position: relative;
+    width: 100%;
+    z-index: 9999;
+  }
+  #styx > ul > li,
+  .wt-menu > ul > li {
+    display: block;
+    width: 100%;
+    float: none;
+  }
+  #styx > ul > li > a,
+  .wt-menu > ul > li > a {
+    display: block;
+    padding: 15px;
+  }
+  #styx > ul > li > ul,
+  .wt-menu > ul > li > ul {
+    position: static;
+    float: none !important;
+    width: 100%;
+  }
+  #styx > ul > li:hover > ul,
+  .wt-menu > ul > li:hover > ul,
+  #styx > ul > li:focus > ul,
+  .wt-menu > ul > li:focus > ul {
+    display: none;
+  }
+  #styx > ul > li:hover > ul.open,
+  .wt-menu > ul > li:hover > ul.open,
+  #styx > ul > li:focus > ul.open,
+  .wt-menu > ul > li:focus > ul.open {
+    display: block;
+  }
+  #styx ul.open,
+  .wt-menu ul.open {
+    display: block;
+  }
+  .wt-nav-click {
+    display: block;
+  }
+  .wt-nav-mobile-open {
+    border-radius: 5px 5px 0 0;
+    -webkit-border-radius: 5px 5px 0 0;
+    -moz-border-radius: 5px 5px 0 0;
+  }
+}
 /* Your custom styles go here
 /* ========================================================== */
 body {
@@ -1371,7 +1560,7 @@ header#prelude > div > figure {
   *width: 21.09375%;
   *padding: 0 11.9609375px;
 }
-header#prelude > div > nav {
+header#prelude > div > div {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -1381,17 +1570,12 @@ header#prelude > div > nav {
   padding: 0 12px;
   *width: 71.09375%;
   *padding: 0 11.9609375px;
+  min-height: 60px;
 }
-header#prelude > div > nav ul {
+header#prelude > div > div ul {
   float: right;
 }
-header#prelude > div > nav ul li {
-  display: inline-block;
-  *display: inline;
-}
-header#prelude > div > nav ul li a {
-  display: inline-block;
-  *display: inline;
+header#prelude > div > div ul li a {
   padding: 0 1.5em;
   white-space: nowrap;
 }
@@ -1478,6 +1662,30 @@ footer#conclusion > div > div {
  * Don't add breakpoints aimed at device pixel widths,
  * add them where they suit best for your design. 
  */
+@media only screen and (max-width: 830px) {
+  header#prelude > div > figure {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    display: inline;
+    float: left;
+    width: 100%;
+    padding: 0 12px;
+    *width: 96.09375%;
+    *padding: 0 11.9609375px;
+  }
+  header#prelude > div > div {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    display: inline;
+    float: left;
+    width: 100%;
+    padding: 0 0;
+    *width: 96.09375%;
+    *padding: 0 -0.0390625px;
+  }
+}
 @media screen and (max-width: 750px) {
   
 }
